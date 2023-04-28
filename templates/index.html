@@ -38,13 +38,17 @@
             {% for i in range(book_name|length) %}
                 <div class="col-md-3" style="margin-top:50px">
                     <div class="card" style="background-color:black">
-                        <div class="card-body">
-                            <div  style="width : 200px; height : 300px; object-fit : cover; margin-right : auto"> <img class="card-img-top" src="{{ image[i] }}"></div>
-                            <p class="text-white">{{ book_name[i] }}</p>
-                            <h4 class="text-white">{{ author[i] }}</h4>
-                            <h4 class="text-white">Votes - {{ votes[i] }}</h4>
-                            <h4 class="text-white">Rating - {{ "{:.2f}".format(rating[i]) }}</h4>
-                        </div>
+
+                        <div class="card-body" style="width: 260px; height: 480px">
+
+                          <img class="card-img-top" src="{{ image[i] }}" style="
+                          width: 170px;
+                          height: 260px;margin-bottom : 19px;" />
+                        <p class="text-white">{{ book_name[i] }}</p>
+                        <h4 class="text-white">{{ author[i] }}</h4>
+                        <h4 class="text-white">Votes - {{ votes[i] }}</h4>
+                        <h4 class="text-white">Rating - {{ "{:.2f}".format(rating[i]) }}</h4>
+                      </div>
                     </div>
                 </div>
             {% endfor %}
